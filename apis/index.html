@@ -1,39 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GitHub User Info</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    />
+  </head>
 
-<body>
+  <body>
     <main class="container">
-        <div>
-            <label for="username">Enter GitHub username:</label>
-            <input type="text" id="username" name="username">
-            <button>Get Info</button>
-        </div>
-        <table>
-            <thead>
-                <tr>
-                    <th>Full Name</th>
-                    <th>Bio</th>
-                    <th>Profile Picture</th>
-                    <th>Home URL</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td id="fullName"></td>
-                    <td id="bio"></td>
-                    <td><img id="profilePicture" src="" alt=""></td>
-                    <td id="homeUrl"></td>
-                </tr>
-            </tbody>
-        </table>
+      <div>
+        <label for="username">Enter GitHub username:</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          style="margin-bottom: 0"
+        />
+        <div
+          id="error-message"
+          style="
+            height: 20px;
+            color: rgb(179, 89, 89);
+            font-size: 14px;
+            display: flex;
+            justify-content: flex-end;
+            line-height: 2;
+          "
+        ></div>
+        <button id="get-info-button">Get Info</button>
+      </div>
+      <table id="table">
+        <thead>
+          <tr>
+            <th>Full Name</th>
+            <th>Bio</th>
+            <th>Profile Picture</th>
+            <th>Home URL</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td id="fullName"></td>
+            <td id="bio"></td>
+            <td>
+              <img id="profilePicture" src="" alt="" style="height: 120px" />
+            </td>
+            <td id="homeUrl"></td>
+          </tr>
+        </tbody>
+      </table>
     </main>
-</body>
-
+    <script src="app.js"></script>
+  </body>
 </html>

@@ -12,8 +12,8 @@
 <body>
     <h1><span id="tip-word">Tip</span> calculator</h1>
     <div id="calculator">
-        <label>Bill Amount:</label><input type="number" id="bill-amount"></br>
-        <label>Percentage Tip:</label><input type="number" id="percentage-tip"></br>
+        <label>Bill Amount:</label><input type="number" id="bill-amount" min="0" required></br>
+        <label>Percentage Tip:</label><input type="number" id="percentage-tip" min="0" required></br>
         <label>Tip Amount:</label><input type="number" id="tip-amount" min="0" disabled></br>
         <label>Total:</label><input type="number" id="total" disabled></br>
         <button id="calculate">Calculate</button>
